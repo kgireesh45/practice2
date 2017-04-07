@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript</title>
+
+</head>
+<body>
+	
+	<script type="text/javascript">
+	// construtors are the method that will run when your obj is instantiated.
+	// method is just a funtion that belongs to a class
+		class User{
+			constructor(userName, email, password)
+				{
+					this.userName= userName;
+					this.email= email;
+					this.password= password;
+				}
+				// static method don't use instatiation
+				static countUsers(){
+				
+					document.write("there are 50 users");
+				
+				}
+				register(){
+					document.write(this.userName+"is registered");
+				
+				}
+		
+		}
+		// inheritance
+		class myClass extends User{
+			constructor(userName, email, password,herPackage){
+					/*this.userName= userName;
+					this.email= email;
+					this.password= password;*/
+					super(userName, email, password);//same instead of all above
+					this.package=herPackage;
+			
+			}
+			getPackage(){
+				console.log(this.userName+"is subscribed to " + this.Package + "Package");
+			
+			}
+		
+		}
+		
+		let giri= new User('gir', 'giri@email.com', '123456');
+		
+		giri.register();
+		
+		User.countUsers();
+		
+		let raj= new myClass('raj', 'gri@email.com', '12345', 'standard');
+		
+		raj.getPackage();
+		
+	</script>
+</body>
+</html>

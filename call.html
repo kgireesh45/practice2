@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript</title>
+
+</head>
+<body>
+	<script type="text/javascript">
+		//method
+		function common(name){
+			return this.x+"is the 1st number" + name +"created it";
+		
+		}
+		//for apply method we use arrays: 2 or more arguments
+		function applying(name, work){
+			return this.x+"is the 1st number" + name + "/" + work + "created it";
+		
+		}
+		var obj1= {x:1, y:2, p:true};
+		var obj2={x:9, b:8}
+		//one method can be used by many objects
+		common.call(obj1, "gireesh");
+		
+		applying.apply(obj1, ["giri","raj"]);
+		
+		//bind method
+		var name="dosth";
+		var sandy ={
+			name: "sandy",
+			
+			onCall: function(){
+				return this.name;
+			
+			}
+		
+		}
+		
+		
+
+	</script>
+</body>
+</html>

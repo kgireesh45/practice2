@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript</title>
+
+</head>
+<body>
+	<script type="text/javascript">
+		 //self involing function
+		 var myFunction=function(fname,lname){
+		
+			document.write("this is anonymus function "+ fname+" "+lname);
+		} 
+		myFunction("giri","raj");//or use ("giri","raj")
+		
+		(function(fame,lame){
+		
+			document.write("this is anonymus function "+ fame+" "+lame);
+		}) ("sandy","dosth");
+	</script>
+</body>
+</html>

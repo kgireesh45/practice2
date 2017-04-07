@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript</title>
+
+</head>
+<body>
+	<script type="text/javascript">
+		var myVar="myValue";
+		(function(){
+			alert(myVar);//undefined
+			
+			var myVar="local value";
+			
+			alert(myVar);//works 
+		
+		})();
+		
+	</script>
+</body>
+</html>

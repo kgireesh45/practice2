@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript</title>
+
+</head>
+<body>
+	
+	<script type="text/javascript">
+		//setInterval lets you execute statements repetedly after a given time of interval. 
+		//setTimeout lets you execute statements once after a given time of interval.
+
+		function test(){
+			console.log("this is timeout function");
+		
+		}
+		
+		setTimeout(test, 1000);
+		var count=0;
+		
+		var set= setInterval(function(){
+		
+		count++;
+		console.log("This executes for every 1 sec");
+		if (count==5){
+			console.log("cleared");
+			clearInterval(set);}
+		},1000);
+		
+		
+	</script>
+</body>
+</html>
