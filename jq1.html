@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#btn").click(function(){
+			
+			$("#mypar").hide();
+			$("ul li:first").hide();
+			$("[href]").hide();
+			});
+			
+			$("#btn2").click(function(){
+				$("#event").hide();
+				
+			
+			});
+			//dblclick event
+			$("#btn3").dblclick(function(){
+			$("#db").hide();
+			});
+			//mouse over
+			$("#div1").mouseleave(function(){
+			
+				alert("you are in div section");
+				$("#div1").css({"background-color": "red", "width":"500px", "height":"100px"})
+				
+			
+			})
+			$("#div2").mousedown(function(){
+			
+				alert("you are in mouse down section");
+				$("#div2").css({"background-color": "blue", "width":"400px", "height":"100px"})
+				
+			
+			})
+			//fade elements (fade in , fade out)
+			$("#btnfade").click(function(){
+				$("#fade").fadeIn();
+				$("#fade2").fadeIn(7000, backfunc);
+				$("#fade3").fadeIn();
+			});
+			
+		});
+		function backfunc(){
+			alert("completed");
+		}
+		
+	</script>
+	<style> 
+		.fd{
+			display:none;
+		
+		}
+	</style>
+	
+</head>
+<body>
+	<input type="button" id="btn" value="click to hide">
+	<p id="mypar">My paragraph</p>
+	<ul>
+		<li>one</li>
+		<li>two</li>
+		<li>three</li>
+	</ul>
+	<a href="www.google.com">google</a>
+	
+	<a >yahoo</a><br/>
+	<input type="button" id="btn2" value="click to hide events">
+	<p id="event">Events</p>
+	<input type="button" id="btn3" value="click to hide events">
+	<p id="db">double click</p>
+	<div id ="div1">
+		<p>This is the div content</p>
+	</div>
+	<div id ="div2">
+		<p>This is the mousedown event</p>
+	</div>
+	
+	<!--fade in element-->
+	<input type="button" id="btnfade" value="click to fade"/>
+	<div id ="fade" class="fd">Fade In Element</div>
+	<div id ="fade2" class="fd">Fade In Element 2 </div>
+	<div id ="fade3"class="fd" >Fade In Element 3</div>
+	
+</body>
+</html>

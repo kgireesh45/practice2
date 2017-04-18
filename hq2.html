@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#btntxt").click(function(){
+			alert($("div").text());
+			});
+			$("#btnhtml").click(function(){
+			alert($("div").html());
+			});
+			$("#btnval").click(function(){
+			alert($("div").val());
+			});
+			
+		});
+	
+	</script>
+</head>
+<body>
+	
+	<input type="button" id="btntxt" value="Text"/>
+	<input type="button" id="btnval" value="val"/>
+	<input type="button" id="btnhtml" value="HTML"/>
+	<input type="text" id="txtemail" placeholder="example@gmail.com" />
+	<div><span>DOM Manipulation by jQuery:</span> This DOM allows you to read/write text content to/from html elements </div>
+</body>
+</html>
